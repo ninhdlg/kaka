@@ -612,7 +612,7 @@ let uploadingIndex = -1;
 
 function loadConfig() {
   try {
-    const saved = localStorage.getItem("ouran_bday_config_v3");
+    const saved = localStorage.getItem("ouran_bday_config_v4");
     if (saved) {
       const parsed = JSON.parse(saved);
       const merged = Object.assign({}, DEFAULT_CONFIG, parsed);
@@ -625,7 +625,7 @@ function loadConfig() {
 
 function saveConfig() {
   try {
-    localStorage.setItem("ouran_bday_config_v3", JSON.stringify(CONFIG));
+    localStorage.setItem("ouran_bday_config_v4", JSON.stringify(CONFIG));
   } catch (e) {
     console.warn("Dung lượng lưu trữ tạm đầy, hãy dùng nút Xuất file gửi bạn để lưu trọn vẹn!");
   }
